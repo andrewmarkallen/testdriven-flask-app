@@ -5,6 +5,7 @@ import axios from 'axios';
 import UsersList from './components/UsersList'
 import AddUser from './components/AddUser'
 import About from './components/About'
+import NavBar from './components/NavBar'
 
 class App extends Component {
   constructor() {
@@ -13,6 +14,7 @@ class App extends Component {
       users: [],
       username: '',
       email: '',
+      title: 'RecipeDog'
     };
     this.addUser = this.addUser.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -50,6 +52,10 @@ class App extends Component {
 
   render() {
     return (
+    <div>
+      <NavBar
+        title ={this.state.title}
+      />
       <div className="container">
         <div className="row">
           <div class4="col-md-6">
@@ -75,6 +81,7 @@ class App extends Component {
           </div>
         </div>
       </div>
+    </div>
     )
   }
 };
