@@ -21,7 +21,7 @@ def create_app(script_info=None):
 
     # enable CORS
     CORS(app)
-
+    
     # set config
     app_settings = os.getenv('APP_SETTINGS')
     app.config.from_object(app_settings)
